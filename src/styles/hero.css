@@ -1,0 +1,63 @@
+@layer components {
+  .hero-bg {
+    background: linear-gradient(105deg, rgba(210, 138, 76, 0.2) 0%, rgba(210, 138, 76, 0.1) 100%);
+  }
+
+  .hero-orb-1 {
+    width: 248px;
+    height: 248px;
+    left: -80px;
+    top: -31px;
+    background: linear-gradient(160deg, rgba(221, 154, 95, 0.43) 22%, rgba(210, 138, 76, 0.04) 88%);
+  }
+
+  .hero-orb-2 {
+    width: 248px;
+    height: 248px;
+    left: 73px;
+    top: -10px;
+    background: linear-gradient(160deg, rgba(221, 154, 95, 0.37) 22%, rgba(210, 138, 76, 0) 88%);
+  }
+
+  .hero-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .hero-dots-desktop {
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .hero-dot {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: 0;
+    border-radius: 9999px;
+    background: var(--color-kprimary);
+    opacity: 0.5;
+  }
+
+  .hero-dot[aria-current='true'] {
+    opacity: 1;
+  }
+
+  .hero-dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-dots-desktop .hero-dot {
+    width: 8px;
+    height: 8px;
+  }
+}

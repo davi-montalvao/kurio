@@ -65,7 +65,7 @@ export function NftPage() {
         {nft.data ? (
           <>
             <section className="hidden items-start gap-8 lg:grid lg:grid-cols-[573px_minmax(0,1fr)]">
-              <NftGallery name={nft.data.name} images={nft.data.gallery} />
+              <NftGallery name={nft.data.name} images={nft.data.gallery ?? []} />
               <NftPurchase nft={nft.data} />
             </section>
 
@@ -105,7 +105,7 @@ export function NftPage() {
 
             {tab === 'detalhes' ? (
               <section className="mt-3 hidden text-sm leading-6 text-kmuted lg:block" role="tabpanel">
-                {nft.data.paragraphs.map((paragraph) => (
+                {(nft.data.paragraphs ?? []).map((paragraph) => (
                   <p key={paragraph} className="mb-6 last:mb-0">
                     {paragraph}
                   </p>
@@ -131,7 +131,7 @@ export function NftPage() {
               </section>
             )}
 
-            {nft.data.related.length > 0 ? (
+            {(nft.data.related ?? []).length > 0 ? (
               <section className="mt-24 hidden lg:block">
                 <div className="flex flex-col gap-3">
                   <h2 className="text-[17px] leading-4 font-bold text-kaccent">Mais desta coleção</h2>

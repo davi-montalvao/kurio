@@ -2,6 +2,8 @@
 
 Marketplace de NFTs para colecionar, filtrar e comprar arte digital. Catálogo, carrinho, pagamento e conta rodam no navegador: a API, a sessão e o tempo real são simulados com MSW. Não há blockchain nem gateway de pagamento.
 
+A versão publicada está em [https://kurio-mu.vercel.app](https://kurio-mu.vercel.app/). O código correspondente está em [https://github.com/davi-montalvao/kurio](https://github.com/davi-montalvao/kurio).
+
 ## Começar
 
 Requisitos: Node.js 22+.
